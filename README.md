@@ -76,3 +76,8 @@ npm intall faker-br
 npx cypress open --env configFile=develop
 
 * Clicar na feature saraiva para rodar a automação de cadastro.
+
+## Rodar automação com headless e gerar vídeo da execução 
+
+* executar o comando: 
+npm run test

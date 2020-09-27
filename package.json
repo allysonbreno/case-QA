@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "test:chrome": "cypress run --browser chrome --no-exit"
+        "test": "npx cypress run --env configFile=develop --spec \"cypress/integration/saraiva.feature\""
     },
     "cypress-cucumber-preprocessor": {
         "step_definitions": "cypress/support/steps"
