@@ -60,38 +60,37 @@ class SaraivaPage {
     cy.get(saraivaElements.campoConfSenha()).should('be.visible')
     .type("test" + inputSenha);
     
-    cy.get('#InputCpf1').should('be.visible')
+    cy.get(saraivaElements.campoCpf()).should('be.visible')
     .type(faker.br.cpf());
 
-    cy.get('[for="RadioMasculino1"]').should('be.visible')
+    cy.get(saraivaElements.radioButtoMasc()).should('be.visible')
     .click();
 
-    cy.get('#InputDataNascimento1').should('be.visible')
+    cy.get(saraivaElements.campoDatanasci()).should('be.visible')
     .type('20031995');
 
-    var numeroCell = faker.phone.phoneNumber();
-    cy.get('#InputCelular1').should('be.visible')
-    .type(numeroCell);
+    cy.get(saraivaElements.campoCelular()).should('be.visible')
+    .type('81996327586');
 
-    cy.get('#InputCep1').should('be.visible')
+    cy.get(saraivaElements.campoCep()).should('be.visible')
     .type('55168970');
 
-    cy.get('.text-left').should('be.visible')
+    cy.get(saraivaElements.selectPais()).should('be.visible')
     .click();
 
-    cy.get('#InputNumero1').should('be.visible')
+    cy.get(saraivaElements.campoNumero()).should('be.visible')
     .type('390');
 
-    cy.get('#InputTelefone1').should('be.visible')
-    .type(numeroCell);
+    cy.get(saraivaElements.campoTell()).should('be.visible')
+    .type('81996327586');
 
-    cy.get('[for="InputOfertasPromocionais1"]').should('be.visible')
+    cy.get(saraivaElements.checkBoxOfertas()).should('be.visible')
     .click();
     
-    cy.get('#FinalizarCadastro1').should('be.visible')
+    cy.get(saraivaElements.btnFinalizarCad()).should('be.visible')
     .click();
 
-    cy.get('.modal-body > :nth-child(1)').should('exist', 'Usuário Cadastrado com sucesso');
+    cy.get(saraivaElements.msgCadastroSucess()).should('contain.text', 'Usuário Cadastrado com sucesso');
   }
 }
 

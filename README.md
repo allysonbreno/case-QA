@@ -69,9 +69,10 @@ O seu time desenvolveu as seguintes Stories:
 
 ## Como rodar automação
 
-* Rodar os seguintes comandos na pasta case-QA: 
+* Rodar o seguinte comando na pasta case-QA para instalar uma lib do node que gera massa de dados + o CYPRESS: 
 npm intall faker-br
-npm install --save-dev cypress cypress-cucumber-preprocessor
 
-* Apos rodar os comandos usar o comando abaixo para abrir o cypress: 
-npx cypress open --env configFile=develop 
+* Apos rodar o comando acima usar o comando abaixo para abrir o cypress: 
+npx cypress open --env configFile=develop
+
+* Clicar na feature saraiva para rodar a automação de cadastro.

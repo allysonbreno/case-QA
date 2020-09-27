@@ -31,4 +31,5 @@ When("visualizo um painel de direcionamento", () => {
 
 When("preencho os dados cadastrais e finalizo o cadastro", () => {
   saraivaPage.preencherDadosCadastrais();
+  saraivaPage.validarHomePage();
 }); 
