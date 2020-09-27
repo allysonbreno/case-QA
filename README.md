@@ -67,4 +67,11 @@ O seu time desenvolveu as seguintes Stories:
 
 > Gostaríamos muito que você nos enviasse o resultado em até 5 dias, mas se você precisar de mais tempo, basta nos avisar!
 
+## Como rodar automação
 
+* Rodar os seguintes comandos na pasta case-QA: 
+npm intall faker-br
+npm install --save-dev cypress cypress-cucumber-preprocessor
+
+* Apos rodar os comandos usar o comando abaixo para abrir o cypress: 
+npx cypress open --env configFile=develop 
