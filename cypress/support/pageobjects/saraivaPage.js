@@ -17,20 +17,20 @@ class SaraivaPage {
   }
 
   validarHomePage() {
-    cy.get('[id="header-logotipo-01"]').should('exist');      
+    cy.get(saraivaElements.homePageHeader()).should('exist');      
   }
 
   validarPainelHome() {
-    cy.get('[ng-controller="MainController"]').should('exist');
+    cy.get(saraivaElements.painelControler()).should('exist');
   }
 
   clicarBtnHomeMenu() {
-    cy.get('.btn__icon').should('be.visible')
+    cy.get(saraivaElements.btnHomeMenu()).should('be.visible')
     .click(); 
   }
 
   clicarBtnCadastrese() { 
-    cy.get('#custommenu-cadastre-se-01').should('be.visible')
+    cy.get(saraivaElements.btnCadastrase()).should('be.visible')
     .click();
   }
 
@@ -39,25 +39,25 @@ class SaraivaPage {
   }
 
   clicarBtnCadastro() {
-    cy.get(':nth-child(2) > .btn').should('be.visible')
+    cy.get(saraivaElements.btnCadastro()).should('be.visible')
     .click(); 
   }
 
   preencherDadosCadastrais() { 
-    cy.get('#InputNome1').should('be.visible')
+    cy.get(saraivaElements.campoNome()).should('be.visible')
     .type(faker.name.firstName());
 
-    cy.get('#InputSobrenome1').should('be.visible')
+    cy.get(saraivaElements.campoSobreNome()).should('be.visible')
     .type(faker.name.lastName());
 
-    cy.get('#InputEmail1').should('be.visible')
+    cy.get(saraivaElements.campoEmail()).should('be.visible')
     .type(faker.internet.email());
 
     var inputSenha = faker.random.number();
-    cy.get('#InputSenha1').should('be.visible')
+    cy.get(saraivaElements.campoSenha()).should('be.visible')
     .type("test" + inputSenha);
     
-    cy.get('#InputConfirmeSenha1').should('be.visible')
+    cy.get(saraivaElements.campoConfSenha()).should('be.visible')
     .type("test" + inputSenha);
     
     cy.get('#InputCpf1').should('be.visible')
